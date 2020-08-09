@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
    if (argc != 2)
       printf("Invalid input!!");
 
-   if (nftw(argv[1], dir_traversal, 20, flag) == -1)
+   if (nftw(argv[1], dir_traversal, 50, flag) == -1)
    {
       perror("nftw error");
       return 1;
