@@ -15,7 +15,7 @@ The number of the policiy we want to change to - **new number of policy**
 
 The number of the priority we want to change to - **new number of priority**
 
-A list of the policy-appropriate digits and what options does priority have:
+A list of the policy-appropriate digits and what options does priority has:
 
 > policy: sched_other 0, priority: 0
 
