@@ -40,4 +40,5 @@ The pid we change will be printed in the terminal.
  
 
 We will see two lines in the same terminal that say we changed the policy and the priority,
-And the new policy and priority of that pid.
+
+and the new policy and priority of that pid.
