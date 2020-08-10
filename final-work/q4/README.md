@@ -1,13 +1,10 @@
-### הרצת הקוד:
-:על מנת להריץ את הקוד יש צורך להריץ פעולות בסדר הבא
+### To run the code:
+To run the code it is necessary to run operations in the following order:
+- Open the terminal and run the makefile with the command: `make`
 
--  `make`:לפתוח את הטרמינל ולהריץ את המייקפייל עם הפקודה
+- After this command, a executable file: dir_traversal is created.
 
-- :לאחר פקודה זו יווצר קובץ הרצה
-
-dir_traversal
-
-- :על מנת לבדוק איזה קבצים ותיקיות קיימים, יש ליצור אותם לפני כן, מצורפת דוגמא
+-To check which files and folders exist, they must be created first, an example is attached:
 
 > $‬‬ ‫‪mkdir‬‬ ‫‪dir‬‬
 
@@ -19,11 +16,10 @@ dir_traversal
 
 > ‫‪$‬‬ ‫‪touch‬‬ ‫‪dir/sub/x‬‬
  
-- :על מנת להריץ את התוכנית , יש לכתוב את הפקודה הבאה
+- To run the program, write the following command: `./dir_traversal dir  `
 
-`./dir_traversal dir  `
  
-- :דוגמא לפלט
+- Example of output:
 
 > ‫‪D‬‬ ‫‪2327983‬‬ ‫‪dir‬‬
 
