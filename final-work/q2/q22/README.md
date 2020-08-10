@@ -19,9 +19,9 @@
  
  `./client "number of the server pid" "number of the signal (2 or 10)" "number of the signals" `
   
-:בטרמינל השני
 
 כדי שיספרו לנו הסיגנלים SIGINT(2) -קודם נריץ את ה
+
  כדי להדפיס כמה סיגנלים התקבלו לנו בהרצה הראשונה SIGUSR1(10)-ולאחר מכן נריץ את ה
 
 - :לדוגמא
