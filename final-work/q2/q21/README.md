@@ -1,22 +1,17 @@
-### הרצת הקוד:
-:על מנת להריץ את הקוד יש צורך להריץ פעולות בסדר הבא
--  `make`:לפתוח את הטרמינל ולהריץ את המייקפייל עם הפקודה
+### To run the code:
+To run the code it is necessary to run operations in the following order:
+- Open the terminal and run the makefile with the command: `make`
 
-- :לאחר פקודה זו יווצר קובץ הרצה
+- After this command, a run file: check_pid is created.
 
-check_pid
 
-- :על מנת לבדוק איזה תהליכים רצים על המחשב, נשתמש בפקודה
+- To check which processes are running on the computer, we will use a command:  ` ps -aux `
  
- `
- ps -aux `
  
-- :על מנת להריץ את התוכנית , יש לכתוב את הפקודה הבאה
+- To run the program, write the following command:  `./check_pid "pid"  `
 
- `./check_pid "pid"  `
-
-- :לדוגמא
+- For example:
 
  `./check_pid 2003 `
  
- `sudo` אם נרצה הרשאה נכתוב בהתחלה 
+ - If we want permission, we will write first: `sudo`  
