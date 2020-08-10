@@ -4,7 +4,7 @@ To run the code it is necessary to run operations in the following order:
 
 - After this command, a executable file: dir_traversal is created.
 
--To check which files and folders exist, they must be created first, an example is attached:
+- To check which files and folders exist, they must be created first, an example is attached:
 
 > $‬‬ ‫‪mkdir‬‬ ‫‪dir‬‬
 
