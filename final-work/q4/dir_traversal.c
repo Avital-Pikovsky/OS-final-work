@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 
    if (nftw(argv[1], dir_traversal, 50, flag) == -1)
    {
+      //50 - the maximum number of directories that nftw() will hold open simultaneously.
       perror("nftw error");
       return 1;
    }
