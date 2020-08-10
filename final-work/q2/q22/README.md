@@ -1,30 +1,29 @@
-### הרצת הקוד:
-:על מנת להריץ את הקוד יש צורך להריץ פעולות בסדר הבא
- 
--  `make`:לפתוח שני טרמינלים, באחד מהטרמינלים להריץ את המייקפייל עם הפקודה
+### To run the code:
+To run the code it is necessary to run operations in the following order:
 
-- :לאחר פקודה זו יווצרו שני קובצי הרצה
+- Open two terminals, in one of the terminals run the makefile with the command: `make`
+
+- After this command, two executable files will be created:
 
 1.server
 
 2.client
  
--   serverבטרמינל הראשון נכתוב את הפקודה הבאה כדי להריץ את הקובץ הרצה של ה
- 
+-  In the first terminal we will write the following command to run the server executable file:
+
  `./server `
   
-כך נדע מה להריץ בפקודה הבאה ,serverשל ה pidלאחר פקודה זו יודפס למסך ה
-  
--   clientבטרמינל השני נכתוב את הפקודה הבאה כדי להריץ את הקובץ הרצה של ה
- 
+After this command the server's pid will be printed on the screen,
+that way we will know what to run in the next command.
+
+- In the second terminal we will write the following command to run the client executable file:
+
  `./client "number of the server pid" "number of the signal (2 or 10)" "number of the signals" `
   
+We will first run the command with SIGINT(2) to count the signals
+And then we will run the command with SIGUSR1(10) to print how many signals were received in the first run.
 
-כדי שיספרו לנו הסיגנלים SIGINT(2) -קודם נריץ את ה
-
- כדי להדפיס כמה סיגנלים התקבלו לנו בהרצה הראשונה SIGUSR1(10)-ולאחר מכן נריץ את ה
-
-- :לדוגמא
+- For example:
 
  `./client <server pid> 2 1000 `
  
