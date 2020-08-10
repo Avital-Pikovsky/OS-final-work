@@ -1,23 +1,21 @@
-### הרצת הקוד:
-:על מנת להריץ את הקוד יש צורך להריץ פעולות בסדר הבא
+### To run the code:
+To run the code it is necessary to run operations in the following order:
 
-- :נפתח שני טרמינלים
+- Open two terminals, in one of the terminals run the makefile with the command: `make`
 
--  `make`:בטרמינל הראשון נריץ את המייקפייל עם הפקודה
-
-- :לאחר פקודה זו יווצר קובץ הרצה
+- After this command a executable file will be created:
 
 set_policy
 
-- :נכתוב את הפקודה הבאה כדי להריץ את התוכנית
-
+ - We will write the following command to run the program:
+ 
  ` sudo ./set_policy "new number of policy" "new number of priority"`
  
-המספר של המדיניות שנרצה לשנות אליה - **new number of policy**
+The number of the policiy we want to change to - **new number of policy**
 
-המספר של העדיפות שנרצה לשנות אליה - **new number of priority**
+The number of the priority we want to change to - **new number of priority**
 
-:רשימה של הספרה המתאימה למדיניות ואיזו אופציה יש לעדיפות
+A list of the policy-appropriate digits and what options does priority have:
 
 > policy: sched_other 0, priority: 0
 
@@ -30,17 +28,16 @@ set_policy
 > policy: sched_idle 5, priority: 0
 
 
+The pid we change will be printed in the terminal.
 
- .שאותו נשנה pid -ונראה שמופיע לנו בטרמינל ה
+ - In the second terminal we will write the following command:  `chrt -p "pid" `
+
+ pid - The same one we got at the first terminal.
  
-- :בטרמינל השני נכתוב את הפקודה הבאה
-
- `chrt -p "pid" `
- 
-אותו אחד שקיבלנו בטרמינל הראשון-pid.
-
-- :לדוגמא
+ - For example:
 
  `chrt -p 2345 `
  
-  ונראה שתי שורות באותו הטרמינל שאומרות ששיניתי את המדיניות ואת העדיפות ולמה שיניתי אותן.
+
+We will see two lines in the same terminal that say we changed the policy and the priority,
+And the new policy and priority of that pid.
