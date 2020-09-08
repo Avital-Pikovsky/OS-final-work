@@ -4,12 +4,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
 
 int dir_traversal(const char *fpath, const struct stat *sb, int tflag, struct FTW *ftwbuf)
 {
-   if (strcmp(fpath + ftwbuf->base, "sl")) //ignore ‫‪soft link
+   if (tflag == FTW_D || tflag == FTW_F)
    {
-
       printf("%s %ld %s \n",
              (tflag == FTW_D) ? "D" : (tflag == FTW_F) ? "F" : "???",
              //st_ino is the file serial number
@@ -22,7 +24,8 @@ int dir_traversal(const char *fpath, const struct stat *sb, int tflag, struct FT
 
 int main(int argc, char *argv[])
 {
-   int flag = 0;
+   //FTW_PHYS - nftw() shall perform a physical walk and shall not follow symbolic links.
+   int flag = FTW_PHYS;
 
    if (argc != 2)
       printf("Invalid input!!");
